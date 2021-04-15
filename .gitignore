@@ -1,6 +1,5 @@
 *venv/
 user.csv
-migrations/
 __pycache__/
 *.pyc
 django.mo
