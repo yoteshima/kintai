@@ -1,0 +1,12 @@
+{% extends "register/base.html" %}
+{% block content %}
+
+{% if user.is_authenticated %}
+    <h4>ログインユーザ：{{ user.username }}様<h4>
+
+    {% block main %}
+    {% endblock %}
+
+{% endif %}
+
+{% endblock %}

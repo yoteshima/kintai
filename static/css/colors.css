@@ -1,0 +1,85 @@
+body {
+    --milky-blue: #949ee3;
+    --pastel-blue: #536bc9;
+    --pastel-red: #c95b53;
+    --pastel-green: #53c972;
+    --pastel-orange: #e68a22;
+    --deep-blue: #061891;
+    --light-red: #f02e4b;
+    --black: #1c1c1c;
+
+    --pastel-blue-shadow: #132052;
+    --pastel-red-shadow: #59201c;
+    --pastel-green-shadow: #20572e;
+    --pastel-orange-shadow: #693f11;
+    --deep-blue-shadow: #04092e;
+
+    --pastel-yellow: #fffce6;
+}
+
+
+.bg-pastel-blue{
+    background: var(--pastel-blue);
+}
+.bg-pastel-red{
+    background: var(--pastel-red);
+}
+.bg-pastel-green{
+    background: var(--pastel-green);
+}
+.bg-pastel-orange{
+    background: var(--pastel-orange);
+}
+.bg-deep-blue{
+    background: var(--deep-blue);
+}
+.bg-black{
+    background: var(--black);
+}
+.bg-white{
+    background: white;
+}
+.bg-milky-blue{
+    background: var(--milky-blue);
+}
+
+.btn.bg-pastel-blue{
+    border-bottom-color: var(--pastel-blue-shadow);
+}
+.btn.bg-pastel-red{
+    border-bottom-color: var(--pastel-red-shadow);
+}
+.btn.bg-pastel-green{
+    border-bottom-color: var(--pastel-green-shadow);
+}
+.btn.bg-pastel-orange{
+    border-bottom-color: var(--pastel-orange-shadow);
+}
+.btn.bg-deep-blue{
+    border-bottom-color: var(--deep-blue-shadow);
+}
+
+.txt-white{
+    color: white;
+}
+
+/* .bg-grad{ */
+  /* background: -moz-linear-gradient(top, var(--deep-blue),var(--milky-blue) 35%, white); */
+  /* background: -webkit-linear-gradient(top, var(--deep-blue),var(--milky-blue) 35%, white); */
+  /* background: linear-gradient(to bottom, var(--deep-blue),var(--milky-blue) 35%, white); */
+/* } */
+.bg-grad{
+  background: -moz-linear-gradient(top, var(--deep-blue),var(--milky-blue));
+  background: -webkit-linear-gradient(top, var(--deep-blue),var(--milky-blue));
+  background: linear-gradient(to bottom, var(--deep-blue),var(--milky-blue));
+}
+
+
+.editable, .editable input, .editable select{
+  background: var(--pastel-yellow);
+}
+
+.holiday td, .holiday input, .holiday select{
+  background: silver !important;
+  color: var(--light-red);
+}

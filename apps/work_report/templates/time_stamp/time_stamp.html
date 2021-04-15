@@ -1,0 +1,44 @@
+{% extends "register/top.html" %}
+{% load static %}
+
+{% block main %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/colors.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/wickedpicker.min.css' %}">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+        <title>打刻画面</title>
+    </head>
+    <body>
+        <div class="clock-container">
+            <div class="clock-area bg-white">
+                <div class="clock">
+                    <div class="current-time"> --- </div>
+                    <div class="timestamp-area">
+                        <input type="text" name="timepicker" class="timepicker timestamp"/>
+                    </div>
+                    <div class="stamp-status"></div>
+                </div>
+            </div>
+        </div>
+        <div class="stamp-button-area">
+            <button type="button" class="btn btn-primary btn-lg entry-work">出勤</button>
+            <button type="button" class="btn btn-danger btn-lg leave-work">退勤</button>
+
+            <!-- <button type="button" class="btn btn-success btn-lg entry-break">休憩入</button> -->
+            <!-- <button type="button" class="btn btn-warning btn-lg leave-break">休憩戻</button> -->
+        </div>
+
+
+        <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+        <script src="{% static 'js/wickedpicker.min.js' %}"></script>
+        <script src="{% static 'js/ajax.js' %}"></script>
+        <script src="{% static 'js/clock.js' %}"></script>
+        <script src="{% static 'js/time_stamp.js' %}"></script>
+
+    </body>
+
+</html>
+{% endblock %}

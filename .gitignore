@@ -1,0 +1,11 @@
+*venv/
+user.csv
+migrations/
+__pycache__/
+*.pyc
+django.mo
+log/
+*.swp
+*.swo
+*.org
+db.sqlite3

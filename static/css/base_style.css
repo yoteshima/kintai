@@ -1,0 +1,11 @@
+.navbar{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+li.list-inline-item{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+li.active{
+  background: #bfbfbf;
+}

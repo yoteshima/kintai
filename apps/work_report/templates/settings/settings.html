@@ -1,0 +1,93 @@
+{% extends "register/top.html" %}
+{% load static %}
+
+{% block main %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/colors.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/wickedpicker.min.css' %}">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+        <title>設定画面</title>
+    </head>
+    <body>
+        <div>
+            <table>
+                <tr>
+                    <th>プロジェクト名</th>
+                    <td class="editable"><input type="text" name="" class="time project-name" value="{{report_settings.project_name}}" /></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th colspan="2">始業時間</th>
+                    <td class="editable"><input type="text" name="" class="time start-time" value="{{report_settings.start_time}}" /></td>
+                </tr>
+                <tr>
+                    <th colspan="2">終業時間</th>
+                    <td class="editable"><input type="text" name="" class="time end-time" value="{{report_settings.end_time}}" /></td>
+                </tr>
+                <tr>
+                    <th rowspan="2">休憩</th>
+                    <th>5:00-22:00</th>
+                    <td class="editable"><input type="text" name="" class="time break1-time" value="{{report_settings.break1}}" /></td>
+                </tr>
+                <tr>
+                    <th>22:00-29:00</th>
+                    <td class="editable"><input type="text" name="" class="time break2-time" value="{{report_settings.break2}}" /></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th rowspan="2">休日</th>
+                    <th>月</th>
+                    <th>火</th>
+                    <th>水</th>
+                    <th>木</th>
+                    <th>金</th>
+                    <th>土</th>
+                    <th>日</th>
+                </tr>
+                <tr>
+                    <td class="editable"><input type="checkbox" name="" class="weekday" value="0"{% if 'Mon' in report_settings.holiday_week %} checked='checked'{% endif %}></td>
+                    <td class="editable"><input type="checkbox" name="" class="weekday" value="1"{% if 'Tue' in report_settings.holiday_week %} checked='checked'{% endif %}></td>
+                    <td class="editable"><input type="checkbox" name="" class="weekday" value="2"{% if 'Wed' in report_settings.holiday_week %} checked='checked'{% endif %}></td>
+                    <td class="editable"><input type="checkbox" name="" class="weekday" value="3"{% if 'Thu' in report_settings.holiday_week %} checked='checked'{% endif %}></td>
+                    <td class="editable"><input type="checkbox" name="" class="weekday" value="4"{% if 'Fri' in report_settings.holiday_week %} checked='checked'{% endif %}></td>
+                    <td class="editable"><input type="checkbox" name="" class="weekday" value="5"{% if 'Sat' in report_settings.holiday_week %} checked='checked'{% endif %}></td>
+                    <td class="editable"><input type="checkbox" name="" class="weekday" value="6"{% if 'Sun' in report_settings.holiday_week %} checked='checked'{% endif %}></td>
+                </tr>
+            </table>
+
+        </div>
+
+        <div>
+            <button type="button" class="btn btn-primary btn-lg apply-settings">適用</button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="apply-settings1" tabindex="-1" role="dialog" aria-labelledby="applySettingsModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                設定を変更しました。
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+        <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/ajax.js' %}"></script>
+        <script src="{% static 'js/report_settings.js' %}"></script>
+
+    </body>
+
+</html>
+{% endblock %}

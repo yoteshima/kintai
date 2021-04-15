@@ -1,0 +1,127 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.hidden{
+  display: none !important;
+}
+.title{
+  font-size: 1.3rem;
+  margin: 0.4rem 1rem;
+}
+
+.clock-container{
+  display: flex;
+  margin:0;
+  height: 100%;
+}
+
+.clock-area{
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: flex-end;  */
+  /* width: 50vw; */
+  border: solid 2px;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+.clock{
+  display: flex;
+  flex-direction: column;
+}
+.current-time{
+  display: inline-block;
+}
+.timestamp-area{
+  display: inline-block;
+}
+.timestamp{
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+  border: none;
+  width:100%;
+}
+
+.stamp-button-area{
+  display: flex;
+  /* justify-content: center; */
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
+table{
+  border: solid 1px #000000; 
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 1rem;
+  /* margin-bottom: 10rem; */
+}
+td,th{
+  font-size:1.3rem;
+  border: solid 1px #000000;
+  padding: 0.2rem;
+  text-align: center;
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer{
+  margin:10rem;
+}
+table #year{
+  min-width: 4rem;
+}
+table #month{
+  min-width: 2rem;
+}
+table .work-days,
+table .holidays{
+  min-width: 4rem;
+}
+
+table .time{
+  width: 4.5rem;
+}
+input.project-name{
+  min-width: 15rem;
+}
+input.time{
+  width: 4.5rem;
+}
+input.total-time{
+  width: 100%;
+}
+input.remarks{
+  min-width: 12rem;
+}
+td input, td select{
+  height: 1.5rem;
+  border: none;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+
+.btn a{
+  text-decoration: none;
+  color: inherit;
+}
+.btn a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+
+.modal-body{
+  font-size: 1.2rem;
+}
